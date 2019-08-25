@@ -4,13 +4,12 @@
 cd $(dirname $0)
 
 dev_build() {
-  # Do what you need to package your app, e.g. mvn package
+  mvn package
   true
 }
 
 dev_run() {
-  # Do what you need to run your app in the foreground
-  # e.g. java -jar target/magic.jar $*
+  java -jar $PWD/target/bus-routes.jar --app.bus-routes=$*
   sleep 600
 }
 
